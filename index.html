@@ -163,6 +163,8 @@ Error message and password prompt
 
 <li>$:/rev/20190919.14:09:56</li>
 
+<li>$:/rev/20190919.14:09:57</li>
+
 <li>$:/SiteSubtitle</li>
 
 <li>$:/SiteTitle</li>
@@ -9704,6 +9706,38 @@ If you (like me) don't want the sidebar cluttered, you can move the trashbin to 
 
 &lt;/div&gt;</pre>
 </div>
+<div created="20190919123109654" list="Introduction" modified="20190919123109655" rev-created="20190919113909221" rev-modified="20190919121823920" rev-tags="TableOfContents" title="$:/rev/20190919.14:09:57">
+<pre>!! The problem
+
+If you use JD's very nice [[Plain Revisions|http://j.d.revisions.tiddlyspot.com/]] plugin and also want to use Kookma's very nice [[trashbin|https://kookma.github.io/TW-Trashbin/]] plugin you have a problem! when a tiddler go in the trash bin, the revisions are not touched, and if you later delete the tiddler from trash, you will have revisions of non-existing tiddelrs filling up the wiki and a hard time locating these revisions.
+
+!! The solution
+
+The solution is my Trashbin-mod. With this mod, the revision tiddlers will be deleted whenever the corresponding tiddeler is deleted permanently from the trash bin. 
+
+The revisions are not changed nor deleted as long as the corresponding tiddler is in the trash bin. Therefore, if you restore a tiddler from the trash bin, the revisions will still be there.
+
+!!! Features
+
+# When a tiddler is ''permanently'' deleted from the trash (individually or in bulk), the corresponding revisions of these tiddelers are also deleted. 
+# In the trashbin sidebar I added a count items in trash that will appear when the trashbin is not empty. 
+
+!! Install
+
+Drag and drop these two tiddlers to your wiki:
+
+* [[$:/plugins/kookma/trashbin/sidebar-tab]]
+* [[$:/plugins/kookma/trashbin/macros/bulk-operation]]
+
+!!! Uninstall
+
+Locate the above tiddlers in your wiki in the [[$:/plugins/kookma/trashbin]] plugin and delete them. This will restore the original settings from the Trashbin plugin.
+
+!! Tip
+
+If you (like me) don't want the sidebar cluttered, you can move the trashbin to the more tab by replacing the `$:/tags/SideBar` tag with `$:/tags/MoreSideBar` tag.
+</pre>
+</div>
 <div created="20190919113608515" modified="20190919113654756" title="$:/SiteSubtitle">
 <pre>Modification of Kookmas trashbin plugin to also handle revisions from JD's revision plugin</pre>
 </div>
@@ -9907,10 +9941,10 @@ If you (like me) don't want the sidebar cluttered, you can move the trashbin to 
     }
 }</pre>
 </div>
-<div created="20190919113909221" modified="20190919121823920" tags="TableOfContents" title="Introduction">
+<div created="20190919113909221" modified="20190919123109658" tags="TableOfContents" title="Introduction">
 <pre>!! The problem
 
-If you use JD's very nice [[Plain Revisions|http://j.d.revisions.tiddlyspot.com/]] plugin and also want to use Kookma's very nice [[trashbin|https://kookma.github.io/TW-Trashbin/]] plugin you have a problem! when a tiddler go in the trash bin, the revisions are not touched, and if you later delete the tiddler from trash, you will have revisions of non-existing tiddelrs filling up the wiki and a hard time locating these revisions.
+If you use JD's very nice [[Plain Revisions|http://j.d.revisions.tiddlyspot.com/]] plugin and also want to use Kookma's very nice [[Trashbin|https://kookma.github.io/TW-Trashbin/]] plugin you have a problem! when a tiddler go in the trash bin, the revisions are not touched, and if you later delete the tiddler from trash, you will have revisions of non-existing tiddelrs filling up the wiki and a hard time locating these revisions.
 
 !! The solution
 
@@ -9937,7 +9971,10 @@ Locate the above tiddlers in your wiki in the [[$:/plugins/kookma/trashbin]] plu
 !! Tip
 
 If you (like me) don't want the sidebar cluttered, you can move the trashbin to the more tab by replacing the `$:/tags/SideBar` tag with `$:/tags/MoreSideBar` tag.
-</pre>
+
+
+!! Issues ?
+Post them at [[github|https://github.com/hchaase/TW-Trashbin-mod/issues]].</pre>
 </div>
 <div caption="{{$:/language/SideBar/Contents/Caption}}" created="20140809114010378" list="HelloThere Learning [[Working with TiddlyWiki]] [[Customise TiddlyWiki]] Features Languages Editions Plugins Platforms Reference Community About" list-after="$:/core/ui/SideBar/Open" modified="20150414070242411" tags="$:/tags/SideBar" title="TableOfContents" type="text/vnd.tiddlywiki">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
