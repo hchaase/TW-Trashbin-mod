@@ -159,11 +159,15 @@ Error message and password prompt
 
 <li>$:/plugins/kookma/trashbin/sidebar-tab</li>
 
-<li>$:/rev/20190919.14:09:50</li>
+<li>$:/plugins/kookma/trashbin/trashbin-mod/readme</li>
 
 <li>$:/rev/20190919.14:09:56</li>
 
 <li>$:/rev/20190919.14:09:57</li>
+
+<li>$:/rev/20190919.15:09:18</li>
+
+<li>$:/rev/20190919.15:09:45</li>
 
 <li>$:/SiteSubtitle</li>
 
@@ -173,9 +177,15 @@ Error message and password prompt
 
 <li>$:/state/plugin-info--896887961-$:/plugins/kookma/trashbin</li>
 
+<li>$:/state/revTab</li>
+
+<li>$:/state/revTab/difftext</li>
+
 <li>$:/state/tab--1498284803</li>
 
 <li>$:/state/tab--1963855381</li>
+
+<li>$:/state/tab-1088956167</li>
 
 <li>$:/state/tab-1749438307</li>
 
@@ -9636,10 +9646,10 @@ stateTiddler=&quot;$:/state/trashbin/emptyTrashBin&quot;
 
 &lt;/div&gt;</pre>
 </div>
-<div created="20190919121823916" list="Introduction" modified="20190919121823917" rev-created="20190919113909221" rev-modified="20190919121248397" rev-tags="TableOfContents" title="$:/rev/20190919.14:09:50">
+<div created="20190919132938820" modified="20190919133438677" title="$:/plugins/kookma/trashbin/trashbin-mod/readme">
 <pre>!! The problem
 
-If you use JD's very nice [[Plain Revisions|http://j.d.revisions.tiddlyspot.com/]] plugin and also want to use Kookma's very nice [[trashbin|https://kookma.github.io/TW-Trashbin/]] plugin you have a problem! when a tiddler go in the trash bin, the revisions are not touched, and if you later delete the tiddler from trash, you will have revisions of non-existing tiddelrs filling up the wiki and a hard time locating these revisions.
+If you use JD's very nice [[Plain Revisions|http://j.d.revisions.tiddlyspot.com/]] plugin and also want to use Kookma's very nice [[Trashbin|https://kookma.github.io/TW-Trashbin/]] plugin you have a problem! when a tiddler go in the trash bin, the revisions are not touched, and if you later delete the tiddler from trash, you will have revisions of non-existing tiddelrs filling up the wiki and a hard time locating these revisions.
 
 !! The solution
 
@@ -9649,7 +9659,8 @@ The revisions are not changed nor deleted as long as the corresponding tiddler i
 
 !!! Features
 
-When a tiddler is ''permanently'' deleted from the trash (individually or in bulk), the corresponding revisions of these tiddelers are also deleted. 
+# When a tiddler is ''permanently'' deleted from the trash (individually or in bulk), the corresponding revisions of these tiddelers are also deleted. 
+# In the trashbin sidebar I added a count items in trash that will appear when the trashbin is not empty. 
 
 !! Install
 
@@ -9657,6 +9668,7 @@ Drag and drop these two tiddlers to your wiki:
 
 * [[$:/plugins/kookma/trashbin/sidebar-tab]]
 * [[$:/plugins/kookma/trashbin/macros/bulk-operation]]
+* [[$:/plugins/kookma/trashbin/trashbin-mod/readme]]
 
 !!! Uninstall
 
@@ -9665,7 +9677,10 @@ Locate the above tiddlers in your wiki in the [[$:/plugins/kookma/trashbin]] plu
 !! Tip
 
 If you (like me) don't want the sidebar cluttered, you can move the trashbin to the more tab by replacing the `$:/tags/SideBar` tag with `$:/tags/MoreSideBar` tag.
-</pre>
+
+
+!! Issues ?
+Post them at [[github|https://github.com/hchaase/TW-Trashbin-mod/issues]].</pre>
 </div>
 <div created="20190919122015150" list="$:/plugins/kookma/trashbin/sidebar-tab" modified="20190919122015154" rev-caption="Trashbin" rev-created="20190613131234955" rev-creator="HC Haase" rev-modified="20190919090434426" rev-modifier="HC Haase" rev-tags="$:/tags/MoreSideBar" rev-type="text/vnd.tiddlywiki" title="$:/rev/20190919.14:09:56">
 <pre>\define show-link()
@@ -9738,6 +9753,77 @@ Locate the above tiddlers in your wiki in the [[$:/plugins/kookma/trashbin]] plu
 If you (like me) don't want the sidebar cluttered, you can move the trashbin to the more tab by replacing the `$:/tags/SideBar` tag with `$:/tags/MoreSideBar` tag.
 </pre>
 </div>
+<div created="20190919133140047" list="Introduction" modified="20190919133140048" rev-created="20190919113909221" rev-modified="20190919123109658" rev-tags="TableOfContents" title="$:/rev/20190919.15:09:18">
+<pre>!! The problem
+
+If you use JD's very nice [[Plain Revisions|http://j.d.revisions.tiddlyspot.com/]] plugin and also want to use Kookma's very nice [[Trashbin|https://kookma.github.io/TW-Trashbin/]] plugin you have a problem! when a tiddler go in the trash bin, the revisions are not touched, and if you later delete the tiddler from trash, you will have revisions of non-existing tiddelrs filling up the wiki and a hard time locating these revisions.
+
+!! The solution
+
+The solution is my Trashbin-mod. With this mod, the revision tiddlers will be deleted whenever the corresponding tiddeler is deleted permanently from the trash bin. 
+
+The revisions are not changed nor deleted as long as the corresponding tiddler is in the trash bin. Therefore, if you restore a tiddler from the trash bin, the revisions will still be there.
+
+!!! Features
+
+# When a tiddler is ''permanently'' deleted from the trash (individually or in bulk), the corresponding revisions of these tiddelers are also deleted. 
+# In the trashbin sidebar I added a count items in trash that will appear when the trashbin is not empty. 
+
+!! Install
+
+Drag and drop these two tiddlers to your wiki:
+
+* [[$:/plugins/kookma/trashbin/sidebar-tab]]
+* [[$:/plugins/kookma/trashbin/macros/bulk-operation]]
+
+!!! Uninstall
+
+Locate the above tiddlers in your wiki in the [[$:/plugins/kookma/trashbin]] plugin and delete them. This will restore the original settings from the Trashbin plugin.
+
+!! Tip
+
+If you (like me) don't want the sidebar cluttered, you can move the trashbin to the more tab by replacing the `$:/tags/SideBar` tag with `$:/tags/MoreSideBar` tag.
+
+
+!! Issues ?
+Post them at [[github|https://github.com/hchaase/TW-Trashbin-mod/issues]].</pre>
+</div>
+<div created="20190919133354695" list="Introduction" modified="20190919133354696" rev-created="20190919113909221" rev-modified="20190919133140048" rev-tags="TableOfContents" title="$:/rev/20190919.15:09:45">
+<pre>!! The problem
+
+If you use JD's very nice [[Plain Revisions|http://j.d.revisions.tiddlyspot.com/]] plugin and also want to use Kookma's very nice [[Trashbin|https://kookma.github.io/TW-Trashbin/]] plugin you have a problem! when a tiddler go in the trash bin, the revisions are not touched, and if you later delete the tiddler from trash, you will have revisions of non-existing tiddelrs filling up the wiki and a hard time locating these revisions.
+
+!! The solution
+
+The solution is my Trashbin-mod. With this mod, the revision tiddlers will be deleted whenever the corresponding tiddeler is deleted permanently from the trash bin. 
+
+The revisions are not changed nor deleted as long as the corresponding tiddler is in the trash bin. Therefore, if you restore a tiddler from the trash bin, the revisions will still be there.
+
+!!! Features
+
+# When a tiddler is ''permanently'' deleted from the trash (individually or in bulk), the corresponding revisions of these tiddelers are also deleted. 
+# In the trashbin sidebar I added a count items in trash that will appear when the trashbin is not empty. 
+
+!! Install
+
+Drag and drop these two tiddlers to your wiki:
+
+* [[$:/plugins/kookma/trashbin/sidebar-tab]]
+* [[$:/plugins/kookma/trashbin/macros/bulk-operation]]
+* [[$:/plugins/kookma/trashbin/trashbin-mod/readme]]
+
+!!! Uninstall
+
+Locate the above tiddlers in your wiki in the [[$:/plugins/kookma/trashbin]] plugin and delete them. This will restore the original settings from the Trashbin plugin.
+
+!! Tip
+
+If you (like me) don't want the sidebar cluttered, you can move the trashbin to the more tab by replacing the `$:/tags/SideBar` tag with `$:/tags/MoreSideBar` tag.
+
+
+!! Issues ?
+Post them at [[github|https://github.com/hchaase/TW-Trashbin-mod/issues]].</pre>
+</div>
 <div created="20190919113608515" modified="20190919113654756" title="$:/SiteSubtitle">
 <pre>Modification of Kookmas trashbin plugin to also handle revisions from JD's revision plugin</pre>
 </div>
@@ -9750,14 +9836,23 @@ If you (like me) don't want the sidebar cluttered, you can move the trashbin to 
 <div created="20190919121946422" modified="20190919121947940" title="$:/state/plugin-info--896887961-$:/plugins/kookma/trashbin">
 <pre>no</pre>
 </div>
+<div created="20190919133414288" modified="20190919133414288" title="$:/state/revTab">
+<pre>$:/rev/20190919.15:09:45</pre>
+</div>
+<div created="20190919133416109" modified="20190919133420395" title="$:/state/revTab/difftext">
+<pre>no</pre>
+</div>
 <div created="20190919113203503" modified="20190919113222157" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/Shadows</pre>
 </div>
 <div created="20190919121923021" modified="20190919121926226" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Toolbars</pre>
 </div>
-<div created="20190919120551483" modified="20190919121943825" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Plugins</pre>
+<div created="20190919133412831" modified="20190919133412831" title="$:/state/tab-1088956167">
+<pre>$:/plugins/jd/plainrevs/TiddlerInfo/Revisions</pre>
+</div>
+<div created="20190919120551483" modified="20190919133157307" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/KeyboardShortcuts</pre>
 </div>
 <div created="20190919120958726" modified="20190919121839935" title="$:/state/tab/moresidebar-1850697562">
 <pre>$:/plugins/kookma/trashbin/sidebar-tab</pre>
@@ -9787,7 +9882,7 @@ If you (like me) don't want the sidebar cluttered, you can move the trashbin to 
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/hch/Downloads/trash-mod.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/hch/Downloads/tmp/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9807,7 +9902,7 @@ If you (like me) don't want the sidebar cluttered, you can move the trashbin to 
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/hch/Downloads/trash-mod.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/hch/Downloads/tmp/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9815,7 +9910,7 @@ If you (like me) don't want the sidebar cluttered, you can move the trashbin to 
         },
         &quot;$:/info/url/origin&quot;: {
             &quot;title&quot;: &quot;$:/info/url/origin&quot;,
-            &quot;text&quot;: &quot;null&quot;
+            &quot;text&quot;: &quot;file://&quot;
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
@@ -9827,7 +9922,7 @@ If you (like me) don't want the sidebar cluttered, you can move the trashbin to 
         },
         &quot;$:/info/browser/language&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/language&quot;,
-            &quot;text&quot;: &quot;da&quot;
+            &quot;text&quot;: &quot;en-US&quot;
         }
     }
 }</pre>
@@ -9941,40 +10036,8 @@ If you (like me) don't want the sidebar cluttered, you can move the trashbin to 
     }
 }</pre>
 </div>
-<div created="20190919113909221" modified="20190919123109658" tags="TableOfContents" title="Introduction">
-<pre>!! The problem
-
-If you use JD's very nice [[Plain Revisions|http://j.d.revisions.tiddlyspot.com/]] plugin and also want to use Kookma's very nice [[Trashbin|https://kookma.github.io/TW-Trashbin/]] plugin you have a problem! when a tiddler go in the trash bin, the revisions are not touched, and if you later delete the tiddler from trash, you will have revisions of non-existing tiddelrs filling up the wiki and a hard time locating these revisions.
-
-!! The solution
-
-The solution is my Trashbin-mod. With this mod, the revision tiddlers will be deleted whenever the corresponding tiddeler is deleted permanently from the trash bin. 
-
-The revisions are not changed nor deleted as long as the corresponding tiddler is in the trash bin. Therefore, if you restore a tiddler from the trash bin, the revisions will still be there.
-
-!!! Features
-
-# When a tiddler is ''permanently'' deleted from the trash (individually or in bulk), the corresponding revisions of these tiddelers are also deleted. 
-# In the trashbin sidebar I added a count items in trash that will appear when the trashbin is not empty. 
-
-!! Install
-
-Drag and drop these two tiddlers to your wiki:
-
-* [[$:/plugins/kookma/trashbin/sidebar-tab]]
-* [[$:/plugins/kookma/trashbin/macros/bulk-operation]]
-
-!!! Uninstall
-
-Locate the above tiddlers in your wiki in the [[$:/plugins/kookma/trashbin]] plugin and delete them. This will restore the original settings from the Trashbin plugin.
-
-!! Tip
-
-If you (like me) don't want the sidebar cluttered, you can move the trashbin to the more tab by replacing the `$:/tags/SideBar` tag with `$:/tags/MoreSideBar` tag.
-
-
-!! Issues ?
-Post them at [[github|https://github.com/hchaase/TW-Trashbin-mod/issues]].</pre>
+<div created="20190919113909221" modified="20190919133354697" tags="TableOfContents" title="Introduction">
+<pre>{{$:/plugins/kookma/trashbin/trashbin-mod/readme}}</pre>
 </div>
 <div caption="{{$:/language/SideBar/Contents/Caption}}" created="20140809114010378" list="HelloThere Learning [[Working with TiddlyWiki]] [[Customise TiddlyWiki]] Features Languages Editions Plugins Platforms Reference Community About" list-after="$:/core/ui/SideBar/Open" modified="20150414070242411" tags="$:/tags/SideBar" title="TableOfContents" type="text/vnd.tiddlywiki">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
